@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -11,13 +10,13 @@ const categories = [
   "On Sale"
 ];
 
-// Sample product data
+// Updated product data with office supplies
 const allProducts = [
   {
     id: "1", 
-    title: "Modern Casual Sweater",
-    price: 89.99,
-    image: "/placeholder.svg",
+    title: "Premium Leather Notebook",
+    price: 24.99,
+    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=387",
     rating: 4.5,
     reviewCount: 128,
     category: "New Arrivals",
@@ -25,10 +24,10 @@ const allProducts = [
   },
   {
     id: "2", 
-    title: "Classic White Sneakers",
-    price: 59.99,
-    originalPrice: 79.99,
-    image: "/placeholder.svg",
+    title: "Ergonomic Office Chair",
+    price: 159.99,
+    originalPrice: 199.99,
+    image: "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?auto=format&fit=crop&q=80",
     rating: 4.8,
     reviewCount: 256,
     category: "Best Sellers",
@@ -36,19 +35,19 @@ const allProducts = [
   },
   {
     id: "3", 
-    title: "Vintage Denim Jacket",
-    price: 129.99,
-    image: "/placeholder.svg",
+    title: "Wireless Mechanical Keyboard",
+    price: 89.99,
+    image: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80",
     rating: 4.2,
     reviewCount: 94,
     category: "Best Sellers"
   },
   {
     id: "4", 
-    title: "Summer Floral Dress",
-    price: 49.99,
-    originalPrice: 69.99,
-    image: "/placeholder.svg",
+    title: "Desk Organizer Set",
+    price: 34.99,
+    originalPrice: 49.99,
+    image: "https://images.unsplash.com/photo-1519494140681-8b17d830a3e9?auto=format&fit=crop&q=80",
     rating: 4.6,
     reviewCount: 187,
     category: "On Sale",
@@ -56,9 +55,9 @@ const allProducts = [
   },
   {
     id: "5", 
-    title: "Leather Weekender Bag",
-    price: 159.99,
-    image: "/placeholder.svg",
+    title: "Adjustable Desk Lamp",
+    price: 45.99,
+    image: "https://images.unsplash.com/photo-1534883430464-67d2c8623db4?auto=format&fit=crop&q=80",
     rating: 4.9,
     reviewCount: 64,
     category: "New Arrivals",
@@ -66,10 +65,10 @@ const allProducts = [
   },
   {
     id: "6", 
-    title: "Minimalist Watch",
-    price: 99.99,
-    originalPrice: 129.99,
-    image: "/placeholder.svg",
+    title: "Colored Sticky Notes Pack",
+    price: 8.99,
+    originalPrice: 12.99,
+    image: "https://images.unsplash.com/photo-1586282391129-76a6df230234?auto=format&fit=crop&q=80",
     rating: 4.7,
     reviewCount: 213,
     category: "On Sale",
@@ -77,18 +76,18 @@ const allProducts = [
   },
   {
     id: "7", 
-    title: "Wireless Earbuds",
-    price: 79.99,
-    image: "/placeholder.svg",
+    title: "Wireless Mouse",
+    price: 29.99,
+    image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80",
     rating: 4.4,
     reviewCount: 178,
     category: "Best Sellers"
   },
   {
     id: "8", 
-    title: "Cotton Lounge Set",
-    price: 69.99,
-    image: "/placeholder.svg",
+    title: "Desktop Monitor Stand",
+    price: 39.99,
+    image: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&q=80",
     rating: 4.3,
     reviewCount: 92,
     category: "New Arrivals",

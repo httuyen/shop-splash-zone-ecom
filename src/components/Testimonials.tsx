@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Carousel,
@@ -15,46 +14,46 @@ const testimonials = [
   {
     id: 1,
     name: "Sarah Johnson",
-    role: "Regular Customer",
+    role: "Office Manager",
     content:
-      "I've been shopping with SplashZone for over a year now, and I'm always impressed by the quality of their products and the speed of delivery. Customer service is top-notch too!",
-    avatar: "/placeholder.svg",
+      "I've been purchasing office supplies from this store for over a year now, and I'm always impressed by the quality and the speed of delivery. Customer service is top-notch too!",
+    avatar: "https://randomuser.me/api/portraits/women/42.jpg",
     rating: 5,
   },
   {
     id: 2,
     name: "Michael Rodriguez",
-    role: "Fashion Enthusiast",
+    role: "Small Business Owner",
     content:
-      "SplashZone has become my go-to store for trendy clothes. Their collections are always up-to-date with the latest fashion trends, and the prices are reasonable.",
-    avatar: "/placeholder.svg",
+      "This has become my go-to store for all office essentials. Their product selection is excellent, and the prices are reasonable compared to other suppliers.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5,
   },
   {
     id: 3,
     name: "Emma Wilson",
-    role: "First-time Buyer",
+    role: "Freelance Designer",
     content:
       "My first purchase exceeded my expectations! The website was easy to navigate, checkout was smooth, and my items arrived earlier than expected. Will definitely shop here again.",
-    avatar: "/placeholder.svg",
+    avatar: "https://randomuser.me/api/portraits/women/24.jpg",
     rating: 4,
   },
   {
     id: 4,
     name: "James Thompson",
-    role: "Tech Blogger",
+    role: "IT Director",
     content:
-      "As someone who reviews e-commerce experiences, I can say that SplashZone stands out for its user experience and product quality. Their attention to detail is impressive.",
-    avatar: "/placeholder.svg",
+      "As someone who manages tech supplies for an entire department, I can say that this store stands out for its user experience and product quality. Their attention to detail is impressive.",
+    avatar: "https://randomuser.me/api/portraits/men/46.jpg",
     rating: 5,
   },
   {
     id: 5,
     name: "Olivia Chen",
-    role: "Style Consultant",
+    role: "Executive Assistant",
     content:
-      "I recommend SplashZone to all my clients. The curated collections make it easy to find exactly what you're looking for, and the quality is consistently excellent.",
-    avatar: "/placeholder.svg",
+      "I recommend this store to all my colleagues. The curated collections make it easy to find exactly what you're looking for, and the quality is consistently excellent.",
+    avatar: "https://randomuser.me/api/portraits/women/36.jpg",
     rating: 5,
   },
 ];

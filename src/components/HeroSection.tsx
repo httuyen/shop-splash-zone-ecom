@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Package, Truck, CreditCard, RefreshCw } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -14,11 +13,12 @@ const HeroSection = () => {
           {/* Hero Text */}
           <div className="flex-1 text-center lg:text-left animate-fade-in">
             <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-              Discover Your Perfect <span className="text-primary">Style</span> Today
+              Find Your Perfect <span className="text-primary">Office</span> Supplies
             </h1>
             <p className="mb-8 text-lg md:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
-              Shop the latest trends and must-have products with free shipping on orders over $50. Limited time offers available!
+              Shop our premium selection of office essentials with free shipping on orders over $50. Boost your productivity today!
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="btn-hover-effect">
                 Shop Now
@@ -54,8 +54,8 @@ const HeroSection = () => {
           <div className="flex-1 w-full md:w-auto">
             <div className="relative w-full aspect-square md:aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/placeholder.svg"
-                alt="Featured product"
+                src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&q=80"
+                alt="Modern office workspace"
                 className="w-full h-full object-cover"
               />
               

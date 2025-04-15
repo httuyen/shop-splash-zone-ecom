@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -6,30 +5,30 @@ import { cn } from "@/lib/utils";
 const categories = [
   {
     id: 1,
-    name: "Fashion & Apparel",
-    image: "/placeholder.svg",
-    itemCount: 120,
+    name: "Stationery & Writing",
+    image: "https://images.unsplash.com/photo-1568205612837-017257d2310a?auto=format&fit=crop&q=80",
+    itemCount: 86,
     color: "bg-blue-500",
   },
   {
     id: 2,
-    name: "Electronics & Gadgets",
-    image: "/placeholder.svg",
-    itemCount: 84,
+    name: "Office Furniture",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80",
+    itemCount: 64,
     color: "bg-purple-500",
   },
   {
     id: 3,
-    name: "Home & Furniture",
-    image: "/placeholder.svg",
-    itemCount: 96,
+    name: "Tech & Accessories",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80",
+    itemCount: 78,
     color: "bg-amber-500",
   },
   {
     id: 4,
-    name: "Beauty & Personal Care",
-    image: "/placeholder.svg",
-    itemCount: 75,
+    name: "Organization & Storage",
+    image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&q=80",
+    itemCount: 53,
     color: "bg-pink-500",
   },
 ];
