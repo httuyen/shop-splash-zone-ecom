@@ -1,10 +1,10 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Heart, ShoppingCart } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/context/CartContext";
 
 interface ProductCardProps {
   id: string;
@@ -31,8 +31,11 @@ const ProductCard = ({
 }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const { toast } = useToast();
+  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
+    addToCart({ id, title, price, image });
+    
     toast({
       title: "Added to cart",
       description: `${title} has been added to your cart.`,

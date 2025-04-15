@@ -11,9 +11,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+import { useCart } from "@/context/CartContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { cartItems, cartCount } = useCart();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,6 +28,10 @@ const Navbar = () => {
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ];
+
+  const calculateTotal = () => {
+    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -62,7 +68,7 @@ const Navbar = () => {
               <Button variant="ghost" size="icon" className="relative">
                 <ShoppingCart className="h-5 w-5" />
                 <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0">
-                  3
+                  {cartCount}
                 </Badge>
               </Button>
             </DropdownMenuTrigger>
@@ -70,24 +76,32 @@ const Navbar = () => {
               <DropdownMenuLabel>My Cart</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <div className="max-h-80 overflow-auto">
-                {[1, 2, 3].map((item) => (
-                  <DropdownMenuItem key={item} className="flex justify-between p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="h-12 w-12 bg-muted rounded-md"></div>
-                      <div>
-                        <p className="font-medium">Product {item}</p>
-                        <p className="text-sm text-muted-foreground">$99.00</p>
+                {cartItems.length > 0 ? (
+                  cartItems.map((item) => (
+                    <DropdownMenuItem key={item.id} className="flex justify-between p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="h-12 w-12 bg-muted rounded-md overflow-hidden">
+                          <img src={item.image} alt={item.title} className="h-full w-full object-cover" />
+                        </div>
+                        <div>
+                          <p className="font-medium">{item.title}</p>
+                          <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+                        </div>
                       </div>
-                    </div>
-                    <span className="text-sm">x1</span>
-                  </DropdownMenuItem>
-                ))}
+                      <span className="text-sm">x{item.quantity}</span>
+                    </DropdownMenuItem>
+                  ))
+                ) : (
+                  <div className="py-6 text-center text-muted-foreground">
+                    Your cart is empty
+                  </div>
+                )}
               </div>
               <DropdownMenuSeparator />
               <div className="p-4">
                 <div className="flex justify-between mb-4">
                   <span>Subtotal:</span>
-                  <span className="font-medium">$297.00</span>
+                  <span className="font-medium">${calculateTotal()}</span>
                 </div>
                 <Button className="w-full">View Cart</Button>
               </div>
@@ -132,7 +146,7 @@ const Navbar = () => {
             </Button>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <ShoppingCart className="h-4 w-4" />
-              Cart (3)
+              Cart ({cartCount})
             </Button>
           </div>
         </div>
